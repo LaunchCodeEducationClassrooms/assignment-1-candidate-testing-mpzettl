@@ -41,13 +41,14 @@ if (candidateAnswer.toLowerCase()===correctAnswer[i].toLowerCase()){
   candidateAnswers.push(candidateAnswer);
 } 
 } 
+let grade = 0;
 function gradeQuiz(candidateAnswers, correctAnswer){
   console.log(`${candidateName}, here is your test summary:\n`);
   for (let j=0; j<=4; j++){
   console.log(`Your answer to question ${j+1} : ${candidateAnswers[j]}`);
   console.log(`Correct answer to question ${j+1} : ${correctAnswer[j]}\n`)
 }
-  let grade = correctAnswers/5;
+  grade = correctAnswers/5;
   if (grade === 1.0){
   console.log(`>>>Overall Grade: ${grade*100}%<<<\n>>>Congratulations ${candidateName}!!!<<<\n>>>Status: You PASSED with a perfect score!<<<`)
   }else if (grade === 0.8  ){
