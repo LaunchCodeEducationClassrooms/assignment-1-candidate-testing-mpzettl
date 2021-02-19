@@ -36,10 +36,12 @@ function gradeQuiz(candidateAnswers) {
 }else{
   console.log(`Too Bad ${candidateName}, you need to study harder!`);
 }*/
+for (j=0; j<=questions.length-1; j++){
 console.log(`\nYour answer: ${candidateAnswer}`);
-console.log(`Correct answer: ${correctAnswer}`)
+console.log(`Correct answer: ${correctAnswer[j]}`);
+}
   let grade;
-  
+
 
   return grade;
 }
