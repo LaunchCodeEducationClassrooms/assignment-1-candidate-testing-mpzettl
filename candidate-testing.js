@@ -24,7 +24,7 @@ function askQuestion() {
 for (let i=0; i<=questions.length-1; i++){
 console.log(`Question ${i+1}:\n${question[i]}`);
 candidateAnswer = input.question("Your answer please: \n");
-console.log(candidateAnswers.push(candidateAnswer));
+candidateAnswers.push(candidateAnswer);
 }
 }
 //console.log(candidateAnswers)
