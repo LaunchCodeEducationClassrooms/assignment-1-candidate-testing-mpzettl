@@ -20,7 +20,8 @@ candidateName = input.question("Please enter your name:\n");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
+console.log(question);
+candidateAnswer = input.question("Your answer please: \n");
 
 }
 
