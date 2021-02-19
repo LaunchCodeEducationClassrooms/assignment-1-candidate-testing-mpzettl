@@ -24,8 +24,8 @@ function askQuestion() {
 for (i=0; i<=questions.length-1; i++){
 console.log(`Question ${i+1}:\n${question}`);
 candidateAnswer = input.question("Your answer please: \n");
-candidateAnswers.push(candidateAnswer);
-}
+
+}candidateAnswers.push(candidateAnswer);
 }
 function gradeQuiz(candidateAnswers) {
 
@@ -37,7 +37,7 @@ function gradeQuiz(candidateAnswers) {
   console.log(`Too Bad ${candidateName}, you need to study harder!`);
 }*/
 console.log(`\nYour answer: ${candidateAnswer}`);
-console.log(`Correct answer: ${correctAnswer[i]}`)
+console.log(`Correct answer: ${correctAnswer}`)
   let grade;
   
 
