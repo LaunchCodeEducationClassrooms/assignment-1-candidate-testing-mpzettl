@@ -20,11 +20,13 @@ candidateName = input.question("Please enter your name:\n");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-console.log(question);
+//console.log(question);
+for (i=0; i<=questions.length-1; i++){
+console.log(`Question ${i+1}:\n${question[i]}`);
 candidateAnswer = input.question("Your answer please: \n");
 
 }
-
+}
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
