@@ -24,9 +24,11 @@ function askQuestion() {
 for (i=0; i<=questions.length-1; i++){
 console.log(`Question ${i+1}:\n${question[i]}`);
 candidateAnswer = input.question("Your answer please: \n");
-//candidateAnswers.push(candidateAnswer);
-}candidateAnswers.push(candidateAnswer);
+console.log(candidateAnswers.push(candidateAnswer));
+}//candidateAnswers.push(candidateAnswer);
 }
+console.log(candidateAnswers)
+
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
@@ -37,7 +39,7 @@ function gradeQuiz(candidateAnswers) {
   console.log(`Too Bad ${candidateName}, you need to study harder!`);
 }*/
 for (j=0; j<=questions.length-1; j++){
-console.log(`\nYour answer: ${candidateAnswer}`);
+console.log(`\nYour answer: ${candidateAnswers[j]}`);
 console.log(`Correct answer: ${correctAnswer[j]}`);
 }
   let grade;
