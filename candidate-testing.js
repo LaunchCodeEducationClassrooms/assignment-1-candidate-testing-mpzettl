@@ -21,13 +21,13 @@ candidateName = input.question("Please enter your name:\n");
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //console.log(question);
-for (i=0; i<=questions.length-1; i++){
+for (let i=0; i<=questions.length-1; i++){
 console.log(`Question ${i+1}:\n${question[i]}`);
 candidateAnswer = input.question("Your answer please: \n");
 console.log(candidateAnswers.push(candidateAnswer));
-}//candidateAnswers.push(candidateAnswer);
 }
-console.log(candidateAnswers)
+}
+//console.log(candidateAnswers)
 
 function gradeQuiz(candidateAnswers) {
 
@@ -38,14 +38,25 @@ function gradeQuiz(candidateAnswers) {
 }else{
   console.log(`Too Bad ${candidateName}, you need to study harder!`);
 }*/
-for (j=0; j<=questions.length-1; j++){
-console.log(`\nYour answer: ${candidateAnswers[j]}`);
-console.log(`Correct answer: ${correctAnswer[j]}`);
-}
+
   let grade;
-
-
+  grade=0;
+  for (let j=0; j<=questions.length-1; j++){
+  console.log(`\nYour answer: ${candidateAnswers[j]}`);
+  console.log(`Correct answer: ${correctAnswer[j]}`);
+  if (candidateAnswers[j].toLowerCase()===correctAnswer[j].toLowerCase()){
+  grade++
+  //console.log(grade);
+  }
+}
+  console.log(`Your score is ${(grade/5)*100}% `)
+  if (grade >= 4){
+    console.log(`${candidateName} you passed!`);
+  } else{
+    console.log(`${candidateName} you failed!`);
+  }
   return grade;
+
 }
 
 function runProgram() {
