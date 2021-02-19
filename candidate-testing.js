@@ -45,9 +45,9 @@ function gradeQuiz(candidateAnswers) {
   let numberCorrect =0;
   for (let j=0; j<=questions.length-1; j++){
   console.log(`\nYour answer: ${candidateAnswers[j]}`);
-  console.log(typeof correctAnswer);
-  console.log(`Correct answer: ${correctAnswer[j]}`);
-  if (candidateAnswers[j].toLowerCase()===correctAnswer[j].toLowerCase()){
+  console.log(typeof correctAnswers);
+  console.log(`Correct answer: ${correctAnswers[j]}`);
+  if (candidateAnswers[j].toLowerCase()===correctAnswers[j].toLowerCase()){
     console.log("correct");
     numberCorrect++
   } else{
