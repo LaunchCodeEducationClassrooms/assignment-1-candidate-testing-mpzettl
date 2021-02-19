@@ -40,24 +40,29 @@ function gradeQuiz(candidateAnswers) {
 }*/
 
   let grade;
-  grade=0;
+  let numberCorrect =0;
   for (let j=0; j<=questions.length-1; j++){
   console.log(`\nYour answer: ${candidateAnswers[j]}`);
   console.log(`Correct answer: ${correctAnswer[j]}`);
   if (candidateAnswers[j].toLowerCase()===correctAnswer[j].toLowerCase()){
-  grade++
-  //console.log(grade);
+    console.log("correct");
+    numberCorrect++
+  } else{
+    console.log("incorrect");
   }
 }
-  console.log(`Your score is ${(grade/5)*100}% `)
-  if (grade >= 4){
+  grade = ((numberCorrect) / (questions.length)) * 100
+  console.log(`Your score is ${grade}% `)
+  if (grade >= 80){
     console.log(`${candidateName} you passed!`);
   } else{
     console.log(`${candidateName} you failed!`);
   }
+  
   return grade;
 
 }
+
 
 function runProgram() {
   askForName();
