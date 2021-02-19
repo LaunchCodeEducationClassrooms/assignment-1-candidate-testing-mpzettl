@@ -28,8 +28,11 @@ candidateAnswer = input.question("Your answer please: \n");
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-
+if (candidateAnswer.toLowerCase()===correctAnswer.toLowerCase()){
+  console.log(`Correct ${candidateName}!`);
+}else{
+  console.log(`Too Bad ${candidateName}, you need to study harder!`);
+}
   let grade;
   
 
